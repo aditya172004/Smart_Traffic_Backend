@@ -1,24 +1,3 @@
-# import pandas as pd
-# import numpy as np
-# from keras.models import load_model
-
-# MODEL_PATH = "model/traffic_model.h5"
-
-# class TrafficModel:
-#     def __init__(self):
-#         self.model = load_model(MODEL_PATH)
-
-#     def predict(self, input_data: dict) -> dict:
-#         df = pd.DataFrame([input_data])
-#         prediction = self.model.predict(df)[0]  # get 1D output array
-#         return {
-#             "green_time_N": float(prediction[0]),
-#             "green_time_S": float(prediction[1]),
-#             "green_time_E": float(prediction[2]),
-#             "green_time_W": float(prediction[3])
-#         }
-
-
 import os
 import pandas as pd
 import numpy as np
