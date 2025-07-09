@@ -27,6 +27,16 @@ import pandas as pd
 
 app = FastAPI(title="Smart Traffic Management API")
 
+# Enable CORS for all origins (development use only)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # allow all HTTP methods
+    allow_headers=["*"],  # allow all headers
+)
+
+
 # Load ANN model and scalers
 model = TrafficModel()
 
